@@ -1,14 +1,3 @@
-##1 plot4("name of file here") starts the function. For example: plot2("household_power_consumption.txt")
-##2 if the file exists it is read into R and assigned to the powers data frame 
-##3 the date column is reformatted as recommended in the assignment instructions
-##4 the two days of interest are subsetted out of the power data frame and assigned to new data frame named "newdf"
-##5 the Sub_metering,Voltage, Global_active_power, and Global_reactive_power cols are reformatted as numeric vectors
-##6 a new column titled "timestamp" is added to newdf. This column consists of the date and time pasted together and reformatted as a POSIXct class.
-##7 Plot Layout is changed from (1,1) to (2,2) using the par command. 
-##8 Each plot is generated. 
-##8 png is generated as a 480 pixel by 480 pixel image. Its saved as "plot4.png". Bitmap files default to pixels as their unit of measurement hence only using "480."
-##9 statement is printed to let you know where the file has been successfully saved
-
 plot4 <- function(files) {
 	if(file.exists(files)){
         powers <- read.table(files, header=T, sep=";")

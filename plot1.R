@@ -1,13 +1,3 @@
-##1 plot1("name of file here") starts the function. For example: plot1("household_power_consumption.txt")
-##2 if file exists it is read into R and assigned to the powers variable 
-##3 the date column is reformatted as recommended in the assignment instructions
-##4 the two days of interest are subsetted out of the power data frame and assigned to new data frame named "newdf"
-##5 the Global_active_power col is reformatted as a numeric vector
-##6 histogram is generated with the title "Global Active Power", red columns, and an x-axis label of "Global Active Power (kilowatts)"
-##7 file is saved as "plot1.png"
-##8 dev is closed
-##9 statement is printed to let you know where the file has been successfully saved
-
 plot1 <- function(files) {
         if(file.exists(files)){
         	powers <- read.table(files, header=T, sep=";")
